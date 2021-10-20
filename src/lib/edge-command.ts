@@ -1,12 +1,13 @@
 import { BearerTokenAuthenticator } from '@smartthings/core-sdk'
 
-import { APICommand, LoginAuthenticator, logManager } from '@smartthings/cli-lib'
+import { APIOrganizationCommand, LoginAuthenticator, logManager } from '@smartthings/cli-lib'
 
 import { EdgeClient } from './edge-client'
 
 
-export abstract class EdgeCommand extends APICommand {
-	static flags = APICommand.flags
+export abstract class EdgeCommand extends APIOrganizationCommand {
+
+	static flags = APIOrganizationCommand.flags
 
 	private _edgeClient?: EdgeClient
 
